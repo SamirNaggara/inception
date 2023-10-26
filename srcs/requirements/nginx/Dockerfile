@@ -19,12 +19,11 @@ RUN openssl req -x509 -nodes -out /etc/nginx/ssl/inception.crt -keyout /etc/ngin
 # Config file nginx
 RUN mkdir -p /var/run/nginx
 COPY conf/nginx.conf /etc/nginx/nginx.conf
-COPY conf/test.html /var/www/html
 
 # Auth
 RUN chmod 755 /var/www/html
 RUN chown -R www-data:www-data /var/www/html
 
 
-# Lauch nginx
+# Lauch nginx first plan
 CMD [ "nginx", "-g", "daemon off;" ]

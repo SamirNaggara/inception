@@ -9,7 +9,7 @@ all		:
 	@sudo mkdir -p $(DATA_PATH)/mariadb
 	@echo "Les dossiers wordpress et mariadb dans $(DATA_PATH) ont bien été créé s'ils ne l'étaient pas deja"
 	@sudo docker compose -f srcs/docker-compose.yaml up --build  -d
-	@echo "$(GREEN)\Création des dockers terminés\nLe site est pret (enfin dans 10 secondes)!\n$(RESET)"
+	@echo "$(GREEN)Création des dockers terminés\nLe site est pret (enfin dans 10 secondes)!\n$(RESET)"
 
 down	:
 	@sudo docker compose -f srcs/docker-compose.yaml down

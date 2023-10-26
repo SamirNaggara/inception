@@ -14,6 +14,4 @@ COPY conf/lauch-db.sh /etc/mysql/mariadb.conf.d/lauch-db.sh
 RUN chmod 777 /etc/mysql/mariadb.conf.d/lauch-db.sh
 
 
-RUN chmod -R 777 /var/lib/mysql
-
 ENTRYPOINT ["/etc/mysql/mariadb.conf.d/lauch-db.sh"]
